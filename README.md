@@ -49,7 +49,7 @@ src/
 
 ```bash
 git clone https://github.com/navdeeppathan/laravel_assignment_frontend_reactjs.git
-cd react-vite-frontend
+cd project name
 npm install
 ```
 
