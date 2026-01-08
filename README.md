@@ -95,3 +95,7 @@ npm run build
 - Search by task title
 
 ### Project Management
+
+- Create, read, update, delete projects
+- Update projects
+- Delete
