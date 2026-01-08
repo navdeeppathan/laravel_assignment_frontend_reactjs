@@ -1,16 +1,97 @@
-# React + Vite
+# React Vite Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This is a **React Vite frontend application** for managing tasks and projects. It provides features such as:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- CRUD operations for tasks and projects
+- Task filtering by status and project
+- Pagination support
+- Integration with a Laravel API backend
+- Responsive UI using Tailwind CSS
+- React Router for navigation
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js + Vite
+- **Styling:** Tailwind CSS
+- **Routing:** React Router v6
+- **HTTP Client:** Axios
+- **State Management:** React `useState` & `useEffect`
+- **Build Tool:** Vite
+- **Package Manager:** npm / yarn
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├─ assets/            # Images, icons, and other static assets
+├─                    # Reusable React components
+│  ├─ TaskForm.jsx
+│  ├─ EditTask.jsx
+│  ├─ TaskList.jsx
+│  ├─ ProjectForm.jsx
+│  └─ ProjectList.jsx
+├─ App.jsx            # Main app entry
+├─ main.jsx           # React DOM render
+└─ index.css          # Tailwind styles
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- npm v9+ or yarn v3+
+- Backend API running (Laravel)
+
+### Installation
+
+```bash
+git clone https://github.com/navdeeppathan/laravel_assignment_frontend_reactjs.git
+cd react-vite-frontend
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+## API Integration
+
+**Base URL:** `http://127.0.0.1:8000/api`
+
+**Endpoints:**
+
+- `GET /tasks` → List tasks (with filters & pagination)
+- `GET /tasks/{id}` → Get single task
+- `POST /tasks` → Create task
+- `PUT /tasks/{id}` → Update task
+- `DELETE /tasks/{id}` → Delete task
+- `GET /projects` → List projects
+- `POST /projects` → Create project
+
+## Styling
+
+- Tailwind CSS is used for responsive and modern UI
+- Components are styled using utility-first classes
+- Responsive breakpoints included for mobile, tablet, and desktop
+
+## Features
+
+### Task Management
+
+- Create, read, update, delete tasks
+- Update task status inline
+- Filter by project or status
+- Search by task title
+
+### Project Management
